@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap");
+@import "tailwindcss";
+
+body {
+  background-color: #f4f4f4;
+  font-family: "Manrope";
+}
+
+.bg-primary {
+  background-color: #008cff;
+}
+
+.text-primary {
+  color: #008cff;
+}
