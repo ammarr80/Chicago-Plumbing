@@ -1,7 +1,7 @@
 import PrimaryButton from "../reusbaleUi/PrimaryButton";
 import HeroImage from "../pics/hero.jpg";
 
-import Stats from "./Stats";
+import Info from "./Info";
 
 import { Mail, Menu, Printer } from "lucide-react";
 
@@ -85,12 +85,16 @@ export default function Hero() {
           <PrimaryButton />
         </div>
         <div className="px-6 py-2">
-          <img src={HeroImage} className="rounded-md shadow-md h-full w-full object-cover" alt="" />
+          <img
+            src={HeroImage}
+            className="rounded-md shadow-md h-full w-full object-cover"
+            alt=""
+          />
         </div>
       </div>
 
       <div className="md:w-[90%] mx-auto md:flex justify-center">
-        <Stats />
+        <Info />
       </div>
     </header>
   );
