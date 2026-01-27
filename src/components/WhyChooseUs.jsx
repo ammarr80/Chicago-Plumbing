@@ -4,7 +4,7 @@ export default function WhyChooseUs() {
         <>
              <section id="why-choose-us" className="max-w-[90%] mx-auto">
         <div
-          className="grid grid-cols-2 mb-8 gap-12 max-md:grid-cols-1 items-center"
+          className="grid lg:grid-cols-[1.3fr_1fr] mb-8 gap-12 lg:gap-0 grid-cols-1 items-center"
         >
           <div className="mb-8">
             <div>
@@ -20,9 +20,9 @@ export default function WhyChooseUs() {
 
               <div
                 id="why-us-cards"
-                className="grid grid-cols-2 gap-5 space-y-6 mb-10 max-md:grid-cols-1 max-md:gap-10 max-md:mb-16"
+                className="grid md:grid-cols-2 md:gap-5 space-y-6 md:mb-10 grid-cols-1 gap-10 mb-16"
               >
-                <div className="flex items-start gap-4">
+                <div className="flex items-start gap-3">
                   <div>
                     <h4 className="text-primary font-bold text-3xl">01</h4>
                   </div>
@@ -37,7 +37,7 @@ export default function WhyChooseUs() {
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4">
+                <div className="flex items-start gap-3">
                   <div>
                     <h4 className="text-primary font-bold text-3xl">02</h4>
                   </div>
@@ -52,7 +52,7 @@ export default function WhyChooseUs() {
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4">
+                <div className="flex items-start gap-3">
                   <div>
                     <h4 className="text-primary font-bold text-3xl">03</h4>
                   </div>
@@ -67,7 +67,7 @@ export default function WhyChooseUs() {
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4">
+                <div className="flex items-start gap-3">
                   <div>
                     <h4 className="text-primary font-bold text-3xl">04</h4>
                   </div>
@@ -92,10 +92,10 @@ export default function WhyChooseUs() {
               </div>
             </div>
           </div>
-          <div className="rounded-4xl" id="grid-image">
+          <div className="" id="grid-image">
             <img
               src={PlumberMan}
-              className="self-end w-[95%] rounded-full justify-self-center"
+              className="self-end md:w-[80%] max-w-[400px] w-[90%] rounded-full justify-self-center"
               alt=""
             />
           </div>
