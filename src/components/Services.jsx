@@ -12,13 +12,13 @@ export default function Services() {
     <>
       <section
         id="services"
-        className="max-w-[90%] mx-auto grid  lg:grid-cols-2 gap-0 md:gap-8  lg:gap-0  lg:items-center grid-cols-1  "
+        className="max-w-[90%] mx-auto grid  xl:grid-cols-2 gap-0 md:gap-8  xl:gap-0  lg:items-center grid-cols-1  "
       >
         <div className="mb-14 md:mb-0">
-          <h2 className="font-bold text-4xl mb-7 max-w-[20ch]">
+          <h2 className="font-bold text-4xl mb-7 xl:max-w-[20ch]">
             Plumbing Services — Emergency & Same-Day
           </h2>
-          <p className="text-gray-600 max-w-[56ch] leading-normal text-base mb-10">
+          <p className="text-gray-600 xl:max-w-[56ch] leading-normal text-base mb-10">
             We handle common plumbing problems for homes and small businesses.
             Whether it’s urgent or routine, we focus on fast response, clear
             pricing, and getting the job done right the first time.
@@ -62,7 +62,7 @@ export default function Services() {
             <div className="mb-8 space-y-3">
               <AlertTriangle className="block mx-auto text-primary w-12 h-12"></AlertTriangle>
               <h4 className="font-bold mb-2">Burst Pipe Repair</h4>
-              <p className="text-gray-600 text-sm max-w-[40ch] mx-auto">
+              <p className="text-gray-600 text-sm max-w-prose mx-auto">
                 We quickly locate and repair burst pipes to prevent water damage
                 and restore your plumbing.
               </p>
@@ -79,7 +79,7 @@ export default function Services() {
             <div className="mb-8 space-y-3">
               <Droplets className="block mx-auto text-primary w-12 h-12"></Droplets>
               <h4 className="font-bold mb-2">Emergency Leak Fix</h4>
-              <p className="text-gray-600 text-sm max-w-[40ch] mx-auto">
+              <p className="text-gray-600 text-sm max-w-prose mx-auto">
                 Immediate response to fix leaks and minimize water waste and
                 property damage.
               </p>
@@ -96,7 +96,7 @@ export default function Services() {
             <div className="mb-8 space-y-3">
               <ShowerHead className="block mx-auto text-primary w-12 h-12"></ShowerHead>
               <h4 className="font-bold mb-2">Bathroom & Toilet Repairs</h4>
-              <p className="text-gray-600 text-sm max-w-[45ch] mx-auto">
+              <p className="text-gray-600 text-sm max-w-prose mx-auto">
                 Expert repairs for sinks, toilets, showers, and other bathroom
                 fixtures.
               </p>
@@ -113,7 +113,7 @@ export default function Services() {
             <div className="mb-8 space-y-3">
               <Thermometer className="block mx-auto text-primary w-12 h-12"></Thermometer>
               <h4 className="font-bold mb-2">Water Heater Repair & Service</h4>
-              <p className="text-gray-600 text-sm max-w-[45ch] mx-auto">
+              <p className="text-gray-600 text-sm max-w-prose mx-auto">
                 Repair and maintain water heaters to ensure a reliable supply of
                 hot water.
               </p>
