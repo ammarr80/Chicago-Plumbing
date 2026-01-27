@@ -12,7 +12,7 @@ export default function Services() {
     <>
       <section
         id="services"
-        className="max-w-[90%] mx-auto grid md:grid-cols-2 items-center grid-cols-1 justify-items-center"
+        className="max-w-[90%] mx-auto grid  lg:grid-cols-2 gap-0 md:gap-8  lg:gap-0  lg:items-center grid-cols-1  "
       >
         <div className="mb-14 md:mb-0">
           <h2 className="font-bold text-4xl mb-7 max-w-[20ch]">
@@ -57,12 +57,12 @@ export default function Services() {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-4 grid-cols-1 md:gap-8 gap-8">
-          <div className="hover:-translate-y-1 transform duration-300 transition-all overflow-hidden py-8 px-3 text-center rounded-md shadow-md relative service-cards bg-white z-3">
-            <div className="mb-6 space-y-2">
+        <div className="grid lg:grid-cols-2 grid-cols-1 gap-4 sm:grid-cols-2 grid-cols-1 md:gap-8 lg:gap-6 gap-8">
+          <div className="hover:-translate-y-1 transform duration-300 transition-all overflow-hidden py-8 px-3 text-center rounded-md shadow-md relative service-cards      bg-white z-3">
+            <div className="mb-8 space-y-3">
               <AlertTriangle className="block mx-auto text-primary w-12 h-12"></AlertTriangle>
               <h4 className="font-bold mb-2">Burst Pipe Repair</h4>
-              <p className="text-gray-600 text-sm">
+              <p className="text-gray-600 text-sm max-w-[40ch] mx-auto">
                 We quickly locate and repair burst pipes to prevent water damage
                 and restore your plumbing.
               </p>
@@ -75,11 +75,11 @@ export default function Services() {
             </a>
           </div>
 
-          <div className="hover:-translate-y-1 transform duration-300 transition-all overflow-hidden py-8 px-3 text-center rounded-md shadow-md relative service-cards bg-white z-3">
-            <div className="mb-6 space-y-2">
+          <div className="hover:-translate-y-1 transform duration-300 transition-all overflow-hidden py-8 px-3 text-center rounded-md shadow-md relative service-cards      bg-white z-3">
+            <div className="mb-8 space-y-3">
               <Droplets className="block mx-auto text-primary w-12 h-12"></Droplets>
               <h4 className="font-bold mb-2">Emergency Leak Fix</h4>
-              <p className="text-gray-600 text-sm">
+              <p className="text-gray-600 text-sm max-w-[40ch] mx-auto">
                 Immediate response to fix leaks and minimize water waste and
                 property damage.
               </p>
@@ -92,11 +92,11 @@ export default function Services() {
             </a>
           </div>
 
-          <div className="hover:-translate-y-1 transform duration-300 transition-all overflow-hidden py-8 px-3 text-center rounded-md shadow-md relative service-cards bg-white z-3">
-            <div className="mb-6 space-y-2">
+          <div className="hover:-translate-y-1 transform duration-300 transition-all overflow-hidden py-8 px-3 text-center rounded-md shadow-md relative service-cards      bg-white z-3">
+            <div className="mb-8 space-y-3">
               <ShowerHead className="block mx-auto text-primary w-12 h-12"></ShowerHead>
               <h4 className="font-bold mb-2">Bathroom & Toilet Repairs</h4>
-              <p className="text-gray-600 text-sm">
+              <p className="text-gray-600 text-sm max-w-[45ch] mx-auto">
                 Expert repairs for sinks, toilets, showers, and other bathroom
                 fixtures.
               </p>
@@ -109,11 +109,11 @@ export default function Services() {
             </a>
           </div>
 
-          <div className="hover:-translate-y-1 transform duration-300 transition-all overflow-hidden py-8 px-3 text-center rounded-md shadow-md relative service-cards bg-white z-3">
-            <div className="mb-6 space-y-2">
+          <div className="hover:-translate-y-1 transform duration-300 transition-all overflow-hidden py-8 px-3 text-center rounded-md shadow-md relative service-cards      bg-white z-3">
+            <div className="mb-8 space-y-3">
               <Thermometer className="block mx-auto text-primary w-12 h-12"></Thermometer>
               <h4 className="font-bold mb-2">Water Heater Repair & Service</h4>
-              <p className="text-gray-600 text-sm">
+              <p className="text-gray-600 text-sm max-w-[45ch] mx-auto">
                 Repair and maintain water heaters to ensure a reliable supply of
                 hot water.
               </p>
