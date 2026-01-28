@@ -15,8 +15,8 @@ export default function Services() {
         className="max-w-[90%] mx-auto grid  xl:grid-cols-2 gap-0 md:gap-8  xl:gap-0  lg:items-center grid-cols-1  "
       >
         <div className="mb-14 md:mb-0">
-          <h2 className="font-bold text-4xl mb-7 max-w-[20ch]">
-            Plumbing Services — Emergency & Same-Day
+          <h2 className="font-bold text-4xl mb-7 max-sm:max-w-[15ch]">
+            Our Services — Emergency & Same-Day
           </h2>
           <p className="text-gray-600 xl:max-w-[56ch] leading-normal text-base mb-10">
             We handle common plumbing problems for homes and small businesses.
