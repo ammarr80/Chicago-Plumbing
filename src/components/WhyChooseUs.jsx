@@ -85,7 +85,7 @@ export default function WhyChooseUs() {
               <div>
                 <a
                   href="tel:(312) 555-0147"
-                  className="bg-primary text-white font-semibold px-6 py-4 rounded-lg"
+                  className="bg-primary text-white font-se,mibold px-6 py-4 rounded-lg"
                 >
                   Call Us for Fixes</a
                 >

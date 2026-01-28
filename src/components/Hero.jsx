@@ -72,7 +72,7 @@ export default function Hero() {
         </ul>
       </nav>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 md:gap-4 py-4 mb-12 items-center lg:items-start
+      <div className="grid grid-cols-1 md:grid-cols-2 md:gap-4 py-4 mb-8 items-center lg:items-start
       ">
         <div className="md:mb-14 mb-4">
           <h1 className="font-bold text-4xl lg:text-5xl mb-5">

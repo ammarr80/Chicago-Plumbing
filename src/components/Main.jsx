@@ -7,7 +7,7 @@ export default function Main() {
     <main className="space-y-26">
       <Stats />
       <Services />
-      <WhyChooseUs />
+    <WhyChooseUs />
     </main>
   );
 }

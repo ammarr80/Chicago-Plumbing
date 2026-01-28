@@ -15,7 +15,7 @@ export default function Services() {
         className="max-w-[90%] mx-auto grid  xl:grid-cols-2 gap-0 md:gap-8  xl:gap-0  lg:items-center grid-cols-1  "
       >
         <div className="mb-14 md:mb-0">
-          <h2 className="font-bold text-4xl mb-7 xl:max-w-[20ch]">
+          <h2 className="font-bold text-4xl mb-7 max-w-[20ch]">
             Plumbing Services — Emergency & Same-Day
           </h2>
           <p className="text-gray-600 xl:max-w-[56ch] leading-normal text-base mb-10">
@@ -50,7 +50,7 @@ export default function Services() {
             </a>
             <a
               href="/services.html"
-              className="bg-white border text-black inline-block font-semibold px-6 py-4 rounded-lg"
+              className="bg-white border text-black inline-block border-black/30 font-semibold px-6 py-4 rounded-lg"
             >
               View All Services
             </a>
