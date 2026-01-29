@@ -2,6 +2,7 @@ import Stats from "./Stats";
 import Services from "./Services";
 import WhyChooseUs from "./WhyChooseUs";
 import ServiceAreas from "./ServiceAreas";
+import Reviews from "./Reviews";
 
 export default function Main() {
   return (
@@ -10,6 +11,7 @@ export default function Main() {
       <Services />
       <WhyChooseUs />
       <ServiceAreas />
+      <Reviews />
     </main>
   );
 }
