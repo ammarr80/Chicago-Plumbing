@@ -17,3 +17,10 @@ body {
 @theme {
   --breakpoint-xs: 575px;
 }
+
+input,
+textarea {
+  outline: none;
+  background: #f4f4f4;
+  border: 1px solid #008cff;
+}
