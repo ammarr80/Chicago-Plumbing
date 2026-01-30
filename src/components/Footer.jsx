@@ -98,7 +98,7 @@ export default function Footer() {
             </div>
           </form>
         </div>
-        <div className="grid grid-cols-2 max-md:grid-cols-1">
+        <div className="grid grid-cols-2 sm:gap-6 max-md:grid-cols-1">
           <div className="space-y-20 py-6 max-md:pb-0">
             <div>
               <h2 className="font-bold text-white text-3xl mb-3 max-md:text-2xl">
