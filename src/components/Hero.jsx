@@ -73,7 +73,7 @@ export default function Hero() {
       </nav>
 
       <div
-        className="grid grid-cols-1 md:grid-cols-2 md:gap-4 py-4 mb-8 items-center lg:items-start
+        className="grid grid-cols-1 lg:grid-cols-2 md:gap-4 py-4 mb-8 items-center lg:items-start
       "
       >
         <div className="md:mb-14 mb-4">
@@ -87,10 +87,10 @@ export default function Hero() {
           </p>
           <PrimaryButton />
         </div>
-        <div className="py-2 hidden md:block">
+        <div className="py-2 lg:px-4 mx-auto xs:hidden lg:block">
           <img
             src={HeroImage}
-            className="rounded-md shadow-md w-full h-full"
+            className="rounded-md shadow-md w-full"
             alt=""
           />
         </div>
