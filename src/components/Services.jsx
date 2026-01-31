@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import {
   AlertTriangle,
   CheckCircle,
@@ -48,12 +49,12 @@ export default function Services() {
             >
               Call for Service
             </a>
-            <a
-              href="/services.html"
+            <Link
+              to="/services"
               className="bg-white border text-black inline-block border-black/30 font-semibold px-6 py-4 rounded-lg"
             >
               View All Services
-            </a>
+            </Link>
           </div>
         </div>
 

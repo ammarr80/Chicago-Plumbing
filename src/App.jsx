@@ -2,12 +2,18 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 
-import Home from "./components/Home";
+import { Routes, Route } from "react-router";
+
+import HomePage from "./pages/HomePage";
+import ServicesPage from "./pages/ServicesPage";
 
 function App() {
   return (
     <>
-      <Home />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/services" element={<ServicesPage />} />
+      </Routes>
     </>
   );
 }

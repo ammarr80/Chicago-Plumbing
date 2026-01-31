@@ -24,3 +24,23 @@ textarea {
   background: #f4f4f4;
   border: 1px solid #008cff;
 }
+
+/* STICKY NAVBAR ANIMATION */
+.popup {
+  animation: pop 0.3s ease-in-out;
+}
+
+@keyframes pop {
+  0% {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.slide-in {
+  animation: slideIn 0.5s ease-in-out;
+}

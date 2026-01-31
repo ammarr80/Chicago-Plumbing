@@ -76,22 +76,24 @@ export default function FAQs() {
 
                 <button
                   className="plus cursor-pointer"
-                  onClick={() => setCurrentIndex(currentIndex != index ? index : null)}
+                  onClick={() =>
+                    setCurrentIndex(currentIndex != index ? index : null)
+                  }
                 >
                   {currentIndex == index ? (
                     <Minus />
-                ) : (
+                  ) : (
                     <Plus className="w-7 h-7" />
                   )}
                 </button>
               </div>
-                
+
               <div>
                 {currentIndex == index && (
-                <p className="text-base tracking-wide leading-normal mt-5 max-md:text-sm text-gray-600 faqs-p">
-                      {faq.answer}
-                </p>
-                    )}
+                  <p className="text-base tracking-wide leading-normal mt-5 max-md:text-sm text-gray-600 faqs-p">
+                    {faq.answer}
+                  </p>
+                )}
               </div>
             </div>
           ))}
