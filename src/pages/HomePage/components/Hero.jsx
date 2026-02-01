@@ -1,11 +1,17 @@
-
 import PrimaryButton from "../../../reusbaleUi/PrimaryButton";
 import HeroImage from "../pics/hero.jpg";
 
 import Info from "./Info";
 import { Link } from "react-router-dom";
 
-import { Mail, Menu, Printer, Phone, ChevronDown, ChevronUp } from "lucide-react";
+import {
+  Mail,
+  Menu,
+  Printer,
+  Phone,
+  ChevronDown,
+  ChevronUp,
+} from "lucide-react";
 
 import { useEffect, useRef, useState } from "react";
 
@@ -116,7 +122,8 @@ export default function Hero() {
               class="flex items-center gap-1 transition-all duration-300 font-semibold text-white navbar-links"
               id="services-dropdown"
             >
-              View All Services {menuOpen == "services" ? <ChevronUp /> : <ChevronDown />}
+              View All Services{" "}
+              {menuOpen == "services" ? <ChevronUp /> : <ChevronDown />}
             </a>
             {menuOpen == "services" && (
               <div
@@ -179,7 +186,12 @@ export default function Hero() {
                     </a>
                   </div>
                 </nav>
-                <a href="" className="bg-primary font-semibold text-white rounded-md px-3 py-2">More Details About Services</a>
+                <a
+                  href=""
+                  className="bg-primary font-semibold text-white rounded-md px-3 py-2"
+                >
+                  More Details About Services
+                </a>
               </div>
             )}
           </div>
@@ -191,7 +203,8 @@ export default function Hero() {
               class="flex items-center gap-1 font-semibold text-white navbar-links"
               id="areas-dropdown"
             >
-              Areas We Serve {menuOpen == "locations" ? <ChevronUp /> : <ChevronDown />}
+              Areas We Serve{" "}
+              {menuOpen == "locations" ? <ChevronUp /> : <ChevronDown />}
             </a>
             {menuOpen == "locations" && (
               <div
@@ -255,7 +268,12 @@ export default function Hero() {
                     </a>
                   </div>
                 </nav>
-                <a href="" className="bg-primary font-semibold text-white rounded-md px-3 py-2">More Details About Locations</a>
+                <a
+                  href=""
+                  className="bg-primary font-semibold text-white rounded-md px-3 py-2"
+                >
+                  More Details About Locations
+                </a>
               </div>
             )}
           </div>
@@ -279,22 +297,26 @@ export default function Hero() {
       <div
         id="hero-upper"
         ref={upSection}
-        className="grid grid-cols-1 lg:grid-cols-2 md:gap-4 py-4 mb-8 items-center lg:items-start
+        className="grid grid-cols-1 md:grid-cols-2 md:gap-6 py-0 mb-16 items-center lg:items-start
       "
       >
-        <div className="md:mb-14 mb-4">
+        <div className="">
           <h1 className="font-bold text-4xl lg:text-5xl mb-5">
-            24/7 Emergency Plumbing in Chicago
+            24/7 Emergency Chicago Plumbing
           </h1>
-          <p className="text-gray-600 leading-normal tracking-wide mb-8 max-w-[50ch]">
+          <p className="text-gray-600 leading-normal tracking-wide mb-10 max-w-[50ch]">
             Fast, reliable plumbing for leaks, clogs, water heaters, and urgent
             repairs. We arrive on time, give clear pricing upfront, and get the
             job done right the first time. Call now for same-day service.
           </p>
           <PrimaryButton />
         </div>
-        <div className="py-2 lg:px-4 mx-auto xs:hidden lg:block">
-          <img src={HeroImage} className="rounded-md shadow-md w-full" alt="" />
+        <div className="py-0 lg:px-4 mx-auto">
+          <img
+            src={HeroImage}
+            className="rounded-md shadow-md rounded-full w-full mx-auto max-w-lg"
+            alt=""
+          />
         </div>
       </div>
 
