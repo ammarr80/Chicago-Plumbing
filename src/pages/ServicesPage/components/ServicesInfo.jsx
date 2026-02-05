@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import PrimaryButton from "../../../reusbaleUi/PrimaryButton";
 import {useState, useEffect, useRef } from "react";
-
+import Footer from "../../../reusbaleUi/Footer";
 
 const data = [
   {
@@ -506,7 +506,9 @@ export default function ServicesInfo() {
         </div>
         </section>
       </main>
-      
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 }
