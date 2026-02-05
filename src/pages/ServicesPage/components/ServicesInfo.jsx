@@ -506,7 +506,6 @@ export default function ServicesInfo() {
         </div>
         </section>
       </main>
-      add same same pics for each service, good idea or a side-contact form?
       <footer>
         <Footer />
       </footer>
