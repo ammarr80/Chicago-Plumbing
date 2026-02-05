@@ -438,8 +438,8 @@ export default function ServicesInfo() {
           <div className="w-full overflow-hidden">
             <div className="flex gap-10" ref={containerRef}>
               {[...service.reviews, ...service.reviews].map((review, index) => (
-                <div key={index} ref={cardRef} className="cards bg-white rounded-lg py-6 px-5 grid justify-items-between space-y-5 shrink-0 max-w-xs">
-                  <div className="space-y-1">
+                <div key={index} ref={cardRef} className="cards bg-white rounded-lg py-6 px-5 grid justify-items-between space-y-6 shrink-0 max-w-[400px] min-w-[300px]">
+                  <div className="space-y-2">
                       <div className="flex gap-2">
                             {Array(review.rating)
                               .fill(0)
@@ -506,6 +506,7 @@ export default function ServicesInfo() {
         </div>
         </section>
       </main>
+      add same same pics for each service, good idea or a side-contact form?
       <footer>
         <Footer />
       </footer>
