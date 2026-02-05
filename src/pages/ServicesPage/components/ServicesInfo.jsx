@@ -1,317 +1,302 @@
 import image from "../pics/services-hero.jpg";
-import { Menu, Mail, Check, CheckCircle, Star, Trash } from "lucide-react";
+import { Menu, Mail,Plus, Minus, Check, CheckCircle, Star, Trash } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import PrimaryButton from "../../../reusbaleUi/PrimaryButton";
-import { useEffect, useRef } from "react";
+import {useState, useEffect, useRef } from "react";
+
 
 const data = [
   {
     title: "Emergency Plumbing",
     description:
-      "Our 24/7 emergency plumbing service provides rapid response for any urgent issue, from burst pipes to severe leaks. We arrive quickly to prevent further damage and restore your plumbing. Trust our skilled team to handle emergencies efficiently and reliably.",
+      "Our 24/7 emergency plumbing service provides rapid response for urgent issues like burst pipes and major leaks to prevent damage and restore your plumbing fast.",
     slug: "emergency-plumbing",
     benefits: [
       "24/7 emergency response",
-      "Fast arrival to prevent damage",
-      "Licensed and insured plumbers",
+      "Fast arrival",
+      "Licensed plumbers",
       "Upfront pricing",
-      "Work backed by guarantee",
+      "Guaranteed work",
     ],
     reviews: [
+      { text: "They fixed my burst pipe fast and professionally.", name: "Alex, Chicago", job: "Homeowner", rating: 5 },
+      { text: "Quick response and great service.", name: "Sarah, Chicago", job: "Tenant", rating: 4 },
+      { text: "Solved the issue right away.", name: "John, Chicago", job: "Landlord", rating: 5 },
+      { text: "Arrived late at night and handled it perfectly.", name: "Michael, Chicago", job: "Homeowner", rating: 5 },
+    ],
+    faqs: [
       {
-        text: "Fast and reliable service! They fixed my burst pipe in no time.",
-        name: "Alex, Chicago",
-        job: "Homeowner",
-        rating: 5,
+        question: "How quickly can you respond to emergency plumbing issues?",
+        answer:
+          "Our emergency team is available 24/7 and responds as quickly as possible. In many cases, we arrive within the same hour to stop leaks, limit damage, and restore plumbing safely.",
       },
       {
-        text: "Highly recommend for emergency plumbing. Very professional.",
-        name: "Sarah, Chicago",
-        job: "Tenant",
-        rating: 4,
+        question: "What problems are considered plumbing emergencies?",
+        answer:
+          "Burst pipes, flooding, sewer backups, major leaks, overflowing toilets, and complete water loss are all emergencies that require immediate professional attention.",
       },
       {
-        text: "Came quickly and solved the problem efficiently. Excellent service.",
-        name: "John, Chicago",
-        job: "Landlord",
-        rating: 5,
-      },
-      {
-        text: "Answered the call late at night and arrived fast. Solid work.",
-        name: "Michael, Chicago",
-        job: "Homeowner",
-        rating: 5,
+        question: "Will I receive pricing before repairs begin?",
+        answer:
+          "Yes. We always provide clear upfront estimates and explain repair options so you know exactly what to expect before any work starts.",
       },
     ],
   },
+
   {
     title: "Shower Head Repair",
     description:
-      "We specialize in repairing and replacing shower heads to ensure optimal water flow and comfort. Using professional tools, we quickly clear blockages and fix faulty connections. Our service ensures a smooth and reliable shower experience.",
+      "We repair and replace shower heads to restore strong water flow while fixing leaks, blockages, and worn connections quickly and cleanly.",
     slug: "shower-head-repair",
     benefits: [
-      "Quick and affordable repair",
-      "Improved water pressure",
-      "Professional tools and parts",
-      "Clean and efficient service",
+      "Quick service",
+      "Better water pressure",
+      "Affordable pricing",
+      "Professional tools",
     ],
     reviews: [
+      { text: "Shower works like new now.", name: "Maya, Chicago", job: "Tenant", rating: 4 },
+      { text: "Fixed the clog in minutes.", name: "Omar, Chicago", job: "Homeowner", rating: 5 },
+      { text: "Very clean and professional.", name: "Leah, Chicago", job: "Manager", rating: 5 },
+      { text: "Pressure improved instantly.", name: "Daniel, Chicago", job: "Homeowner", rating: 4 },
+    ],
+    faqs: [
       {
-        text: "My shower now works perfectly. Very fast and clean job.",
-        name: "Maya, Chicago",
-        job: "Tenant",
-        rating: 4,
+        question: "What shower head issues do you repair?",
+        answer:
+          "We fix leaks, mineral buildup, low pressure, broken fittings, and worn internal parts. When replacement makes more sense, we install new units for improved performance.",
       },
       {
-        text: "Excellent service! Fixed the blockage in minutes.",
-        name: "Omar, Chicago",
-        job: "Homeowner",
-        rating: 5,
+        question: "Can weak water pressure in the shower be improved?",
+        answer:
+          "Yes. Low pressure is commonly caused by clogs, sediment buildup, or faulty components, all of which we can diagnose and fix effectively.",
       },
       {
-        text: "Professional and friendly. Shower flows like new.",
-        name: "Leah, Chicago",
-        job: "Assistant Property Manager",
-        rating: 5,
-      },
-      {
-        text: "Water pressure improved instantly. Happy with the service.",
-        name: "Daniel, Chicago",
-        job: "Homeowner",
-        rating: 4,
+        question: "How long does a shower head repair usually take?",
+        answer:
+          "Most repairs are completed in one visit and typically take less than an hour depending on the problem.",
       },
     ],
   },
+
   {
     title: "Sewer Line Repair",
     description:
-      "Damaged or clogged sewer lines can cause serious problems in your home. Our team repairs or replaces sewer lines to restore proper flow and prevent backups. We use modern equipment for long-lasting results with minimal disruption.",
+      "We repair clogged or damaged sewer lines using modern inspection and repair methods to restore drainage and prevent costly backups.",
     slug: "sewer-line-repair",
     benefits: [
-      "Prevents backups and property damage",
-      "Modern inspection equipment",
-      "Long-term repair solutions",
-      "Experienced sewer specialists",
+      "Prevents backups",
+      "Camera inspections",
+      "Long-lasting repairs",
+      "Minimal disruption",
     ],
     reviews: [
+      { text: "Fixed our sewer problem fast.", name: "Hassan, Chicago", job: "Landlord", rating: 5 },
+      { text: "Very professional service.", name: "Nina, Chicago", job: "Manager", rating: 4 },
+      { text: "Saved us from major damage.", name: "Eli, Chicago", job: "Homeowner", rating: 5 },
+      { text: "Clear and honest work.", name: "Robert, Chicago", job: "Homeowner", rating: 5 },
+    ],
+    faqs: [
       {
-        text: "Sewer line fixed without any hassle. Very professional team.",
-        name: "Hassan, Chicago",
-        job: "Landlord",
-        rating: 5,
+        question: "How do you diagnose sewer line problems?",
+        answer:
+          "We use advanced camera systems to inspect inside your sewer lines, allowing us to locate blockages, cracks, and damage accurately without unnecessary digging.",
       },
       {
-        text: "Quick, clean, and efficient. Highly recommend their service.",
-        name: "Nina, Chicago",
-        job: "Property Manager",
-        rating: 4,
+        question: "Will sewer repairs damage my yard or floors?",
+        answer:
+          "Not always. We use modern techniques designed to minimize disruption and only dig when absolutely necessary for a permanent repair.",
       },
       {
-        text: "Reliable and knowledgeable. Saved us from a big backup.",
-        name: "Eli, Chicago",
-        job: "Homeowner",
-        rating: 5,
-      },
-      {
-        text: "Explained everything clearly and completed the job on time.",
-        name: "Robert, Chicago",
-        job: "Homeowner",
-        rating: 5,
+        question: "What warning signs indicate sewer line issues?",
+        answer:
+          "Common signs include slow drains, recurring clogs, foul odors, gurgling sounds, and water backing up into sinks or toilets.",
       },
     ],
   },
+
   {
     title: "Water Heater Services",
     description:
-      "We provide full water heater services including installation, repair, and maintenance. Our experts ensure reliable hot water and extend the life of your system. We work with both traditional and tankless water heaters.",
+      "We install, repair, and maintain water heaters to keep hot water reliable and energy efficient in your home or business.",
     slug: "water-heater-services",
     benefits: [
-      "Consistent hot water",
-      "Energy-efficient solutions",
-      "All major brands serviced",
-      "Professional installation and repair",
+      "Reliable hot water",
+      "Energy efficiency",
+      "All brands serviced",
+      "Same-day service",
     ],
     reviews: [
+      { text: "Installed fast and works great.", name: "Liam, Chicago", job: "Homeowner", rating: 5 },
+      { text: "Very friendly technicians.", name: "Sophia, Chicago", job: "Tenant", rating: 5 },
+      { text: "Repaired my old heater easily.", name: "Zara, Chicago", job: "Landlord", rating: 4 },
+      { text: "Hot water same day.", name: "Andrew, Chicago", job: "Homeowner", rating: 5 },
+    ],
+    faqs: [
       {
-        text: "Water heater installed quickly and works perfectly.",
-        name: "Liam, Chicago",
-        job: "Homeowner",
-        rating: 5,
+        question: "What types of water heaters do you service?",
+        answer:
+          "We service traditional tank systems and modern tankless water heaters from all major manufacturers.",
       },
       {
-        text: "Friendly technicians and professional service.",
-        name: "Sophia, Chicago",
-        job: "Tenant",
-        rating: 5,
+        question: "How long does installation usually take?",
+        answer:
+          "Most water heater installations are completed within the same day so you can quickly return to normal use.",
       },
       {
-        text: "Fixed my old heater efficiently. Highly recommend.",
-        name: "Zara, Chicago",
-        job: "Landlord",
-        rating: 4,
-      },
-      {
-        text: "Hot water restored the same day. Very smooth process.",
-        name: "Andrew, Chicago",
-        job: "Homeowner",
-        rating: 5,
+        question: "Should I repair or replace an older heater?",
+        answer:
+          "We assess the unit’s condition and provide honest recommendations based on cost, efficiency, and reliability.",
       },
     ],
   },
+
   {
     title: "Leak Detection & Repair",
     description:
-      "Hidden leaks can cause serious damage if left untreated. We use advanced detection tools to locate leaks quickly and repair them before they worsen. This helps protect your home and reduce water bills.",
+      "We locate hidden leaks using advanced tools and repair them quickly before they cause serious structural damage.",
     slug: "leak-detection-repair",
     benefits: [
-      "Early leak detection",
-      "Prevents water damage",
-      "Reduces utility bills",
-      "Non-invasive methods",
+      "Precise detection",
+      "No unnecessary damage",
+      "Lower water bills",
+      "Fast repairs",
     ],
     reviews: [
+      { text: "Found a hidden leak quickly.", name: "Aisha, Chicago", job: "Homeowner", rating: 5 },
+      { text: "Very precise service.", name: "Daniel, Chicago", job: "Supervisor", rating: 4 },
+      { text: "Quick and clean fix.", name: "Fatima, Chicago", job: "Tenant", rating: 5 },
+      { text: "Solved what others couldn’t.", name: "Thomas, Chicago", job: "Homeowner", rating: 5 },
+    ],
+    faqs: [
       {
-        text: "Found and fixed a hidden leak fast. Saved me a lot of money.",
-        name: "Aisha, Chicago",
-        job: "Homeowner",
-        rating: 5,
+        question: "How are hidden leaks detected?",
+        answer:
+          "We use specialized equipment such as moisture sensors and acoustic tools to locate leaks without damaging walls or floors.",
       },
       {
-        text: "Professional and accurate service. Highly recommend.",
-        name: "Daniel, Chicago",
-        job: "Maintenance Supervisor",
-        rating: 4,
+        question: "Can small leaks cause serious problems?",
+        answer:
+          "Yes. Over time even minor leaks can lead to mold growth, structural damage, and higher water bills.",
       },
       {
-        text: "Quick and non-invasive. Very happy with the results.",
-        name: "Fatima, Chicago",
-        job: "Tenant",
-        rating: 5,
-      },
-      {
-        text: "Stopped a leak that others couldn’t find. Impressive work.",
-        name: "Thomas, Chicago",
-        job: "Homeowner",
-        rating: 5,
+        question: "Do you repair leaks after detection?",
+        answer:
+          "Yes. Once located, we repair the leak immediately whenever possible to prevent further damage.",
       },
     ],
   },
+
   {
     title: "Toilet & Fixture Repair",
     description:
-      "We repair toilets, sinks, and other plumbing fixtures to restore proper function. Our process includes diagnosing issues, replacing worn parts, and testing performance. Fast service with minimal disruption.",
+      "We repair leaking toilets, broken sinks, faucets, and plumbing fixtures to restore normal use quickly and affordably.",
     slug: "toilet-fixture-repair",
     benefits: [
       "Fast repairs",
-      "Fixes leaks and running toilets",
-      "Improves bathroom functionality",
+      "Leak elimination",
       "Affordable service",
+      "One-visit solutions",
     ],
     reviews: [
+      { text: "Toilet fixed perfectly.", name: "Ravi, Chicago", job: "Tenant", rating: 5 },
+      { text: "Quick and friendly team.", name: "Emily, Chicago", job: "Homeowner", rating: 4 },
+      { text: "Multiple fixtures repaired.", name: "Jamal, Chicago", job: "Manager", rating: 5 },
+      { text: "Everything works now.", name: "Kevin, Chicago", job: "Homeowner", rating: 5 },
+    ],
+    faqs: [
       {
-        text: "Toilet repaired quickly and perfectly. Great job.",
-        name: "Ravi, Chicago",
-        job: "Tenant",
-        rating: 5,
+        question: "What toilet problems do you repair?",
+        answer:
+          "We fix running toilets, constant clogs, weak flushing, leaking bases, and broken internal components.",
       },
       {
-        text: "Friendly team and very efficient service.",
-        name: "Emily, Chicago",
-        job: "Homeowner",
-        rating: 4,
+        question: "Can damaged fixtures be replaced?",
+        answer:
+          "Yes. We repair or replace sinks, faucets, and other fixtures depending on their condition and your preference.",
       },
       {
-        text: "Fixed multiple fixtures without any hassle.",
-        name: "Jamal, Chicago",
-        job: "Assistant Property Manager",
-        rating: 5,
-      },
-      {
-        text: "Everything works smoothly again. Very reliable service.",
-        name: "Kevin, Chicago",
-        job: "Homeowner",
-        rating: 5,
+        question: "How fast are most repairs completed?",
+        answer:
+          "Most fixture repairs are completed within one visit, usually under an hour.",
       },
     ],
   },
+
   {
     title: "Sump Pump Installation",
     description:
-      "Protect your basement from flooding with professional sump pump installation and repair. We install reliable systems designed to handle heavy rain and snow melt. Our team ensures proper setup and performance.",
+      "We install and service sump pumps to protect basements from flooding and long-term water damage.",
     slug: "sump-pump-installation",
     benefits: [
-      "Prevents basement flooding",
-      "Reliable pump systems",
-      "Proper installation",
-      "Long-term home protection",
+      "Flood prevention",
+      "Reliable equipment",
+      "Professional installation",
+      "Long-term protection",
     ],
     reviews: [
+      { text: "Installed perfectly.", name: "Grace, Chicago", job: "Homeowner", rating: 5 },
+      { text: "Fast and reliable.", name: "Omar, Chicago", job: "Landlord", rating: 5 },
+      { text: "Basement stays dry now.", name: "Leila, Chicago", job: "Tenant", rating: 4 },
+      { text: "Great workmanship.", name: "Brian, Chicago", job: "Homeowner", rating: 5 },
+    ],
+    faqs: [
       {
-        text: "Installed my sump pump perfectly. Very professional.",
-        name: "Grace, Chicago",
-        job: "Homeowner",
-        rating: 5,
+        question: "When is a sump pump necessary?",
+        answer:
+          "If your basement experiences flooding, water pooling, or high moisture levels, a sump pump is strongly recommended.",
       },
       {
-        text: "Reliable and quick service. Highly recommend.",
-        name: "Omar, Chicago",
-        job: "Landlord",
-        rating: 5,
+        question: "How long does installation take?",
+        answer:
+          "Most installations are completed within a single day.",
       },
       {
-        text: "Basement fully protected now. Great experience.",
-        name: "Leila, Chicago",
-        job: "Tenant",
-        rating: 4,
-      },
-      {
-        text: "Clear explanation and solid installation work.",
-        name: "Brian, Chicago",
-        job: "Homeowner",
-        rating: 5,
+        question: "Do you service existing sump pumps?",
+        answer:
+          "Yes. We repair, replace, and maintain existing systems to ensure reliable performance.",
       },
     ],
   },
+
   {
     title: "Frozen / Burst Pipe Repair",
     description:
-      "Frozen or burst pipes can cause major water damage fast. We provide rapid repairs to stop leaks, thaw pipes, and prevent further issues. Quick action helps protect your home and plumbing system.",
+      "We provide rapid repairs for frozen and burst pipes to stop leaks and protect your home from major water damage.",
     slug: "frozen-burst-pipe-repair",
     benefits: [
-      "Rapid response",
-      "Prevents major water damage",
-      "Safe pipe thawing",
-      "Emergency-ready service",
+      "Immediate response",
+      "Safe thawing methods",
+      "Damage prevention",
+      "Long-term fixes",
     ],
     reviews: [
+      { text: "Saved my house from flooding.", name: "Nora, Chicago", job: "Tenant", rating: 5 },
+      { text: "Very fast service.", name: "Imran, Chicago", job: "Homeowner", rating: 5 },
+      { text: "Professional repair.", name: "Samantha, Chicago", job: "Landlord", rating: 4 },
+      { text: "Handled frozen pipes safely.", name: "David, Chicago", job: "Homeowner", rating: 5 },
+    ],
+    faqs: [
       {
-        text: "Came immediately and fixed the burst pipe. Lifesaver!",
-        name: "Nora, Chicago",
-        job: "Tenant",
-        rating: 5,
+        question: "What should I do immediately after a pipe bursts?",
+        answer:
+          "Shut off your main water supply right away and contact us for emergency repair service.",
       },
       {
-        text: "Fast, professional, and efficient service.",
-        name: "Imran, Chicago",
-        job: "Homeowner",
-        rating: 5,
+        question: "Can frozen pipes be thawed without damage?",
+        answer:
+          "Yes. We use controlled, safe thawing techniques to avoid pipe cracks or bursting.",
       },
       {
-        text: "Saved my home from flooding. Excellent work.",
-        name: "Samantha, Chicago",
-        job: "Landlord",
-        rating: 4,
-      },
-      {
-        text: "Handled the frozen pipes safely and quickly.",
-        name: "David, Chicago",
-        job: "Homeowner",
-        rating: 5,
+        question: "Do you help prevent pipes from freezing again?",
+        answer:
+          "Yes. We provide insulation and preventative solutions to protect your plumbing in cold weather.",
       },
     ],
   },
 ];
+
 
 
 
@@ -347,6 +332,7 @@ export default function ServicesInfo() {
     return () => cancelAnimationFrame(animationId)
   }, []);
 
+    const [currentIndex, setCurrentIndex] = useState(null);
   return (
     <div className="space-y-26">
       <header className="max-w-[90%] mx-auto">
@@ -444,10 +430,7 @@ export default function ServicesInfo() {
           </div>
         </section>
 
-<section>
-
-</section>
-        <section classNamey="">
+        <section className="">
           <h2 className="font-bold text-4xl mb-5">What People Say</h2>
           <p className="text-gray-600 mb-12">
             Our customers trust us for fast response times, honest pricing, and quality workmanship. From emergency repairs to routine maintenance, we focus on delivering reliable plumbing solutions that keep homes and businesses running smoothly.
@@ -481,7 +464,49 @@ export default function ServicesInfo() {
             </div>
           </div>
         </section>
+        <section>
+           <h2 className="font-bold text-4xl mb-5">What People Ask</h2>
+          <p className="text-gray-600 mb-12">
+            Our customers trust us for fast response times, honest pricing, and quality workmanship. From emergency repairs to routine maintenance, we focus on delivering reliable plumbing solutions that keep homes and businesses running smoothly.
+          </p>
+            <div className="faqs-container max-w-[80%] mx-auto space-y-4 max-md:max-w-[100%]">
+          {service.faqs.map((faq, index) => (
+            <div
+              key={index}
+              className="bg-white px-6 py-4 rounded-lg shadow-sm max-md:px-4 max-md:py-3"
+            >
+              <div className="flex items-center justify-between">
+                <h3 className="font-bold text-lg max-md:text-base">
+                  {faq.question}
+                </h3>
+
+                <button
+                  className="plus cursor-pointer"
+                  onClick={() =>
+                    setCurrentIndex(currentIndex != index ? index : null)
+                  }
+                >
+                  {currentIndex == index ? (
+                    <Minus />
+                  ) : (
+                    <Plus className="w-7 h-7" />
+                  )}
+                </button>
+              </div>
+
+              <div>
+                {currentIndex == index && (
+                  <p className="text-base tracking-wide leading-normal mt-5 max-md:text-sm text-gray-600 faqs-p">
+                    {faq.answer}
+                  </p>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+        </section>
       </main>
+      
     </div>
   );
 }
