@@ -297,7 +297,7 @@ export default function Hero() {
       <div
         id="hero-upper"
         ref={upSection}
-        className="grid grid-cols-1 md:grid-cols-2 gap-6 py-0 mb-16 items-center lg:items-start
+        className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16 items-center lg:items-start
       "
       >
         <div className="">

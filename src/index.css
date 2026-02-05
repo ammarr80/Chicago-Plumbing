@@ -44,3 +44,12 @@ textarea {
 .slide-in {
   animation: slideIn 0.5s ease-in-out;
 }
+
+.scrollbar-hide {
+  -ms-overflow-style: none;   /* IE & Edge */
+  scrollbar-width: none;      /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;              /* Chrome, Safari */
+}

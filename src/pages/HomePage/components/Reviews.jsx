@@ -40,7 +40,6 @@ export default function Reviews() {
   let x2 = useRef(0);
   let speed2 = 1;
   let cardWidth2 = useRef(0);
-
   useEffect(() => {
     cardWidth2.current = cardRef2.current.offsetWidth + GAP2;
     loopWidth2.current = cardWidth2.current * cardAmount2;
@@ -94,7 +93,7 @@ export default function Reviews() {
               >
                 <div
                   ref={cardRef}
-                  className="cards min-w-[300px] min-h-[80px] bg-white rounded-xl flex flex-col p-4 snap-start"
+                  className="cards min-w-[300px]  bg-white rounded-xl flex flex-col p-4 snap-start"
                 >
                   <div className="flex space-x-1 mb-2">
                     <Star
@@ -136,7 +135,7 @@ export default function Reviews() {
                   </div>
                 </div>
 
-                <div className="cards min-w-[300px] min-h-[80px] bg-white rounded-xl flex flex-col p-4 snap-start">
+                <div className="cards min-w-[300px]  bg-white rounded-xl flex flex-col p-4 snap-start">
                   <div className="flex space-x-1 mb-2">
                     <Star
                       className="p-1 w-6 h-6 rounded-full bg-primary"
@@ -177,7 +176,7 @@ export default function Reviews() {
                   </div>
                 </div>
 
-                <div className="cards min-w-[300px] min-h-[80px] bg-white rounded-xl flex flex-col p-4 snap-start">
+                <div className="cards min-w-[300px]  bg-white rounded-xl flex flex-col p-4 snap-start">
                   <div className="flex space-x-1 mb-2">
                     <Star
                       className="p-1 w-6 h-6 rounded-full bg-primary"
@@ -218,7 +217,7 @@ export default function Reviews() {
                   </div>
                 </div>
 
-                <div className="cards min-w-[300px] min-h-[80px] bg-white rounded-xl flex flex-col p-4 snap-start">
+                <div className="cards min-w-[300px]  bg-white rounded-xl flex flex-col p-4 snap-start">
                   <div className="flex space-x-1 mb-2">
                     <Star
                       className="p-1 w-6 h-6 rounded-full bg-primary"
@@ -259,7 +258,7 @@ export default function Reviews() {
                   </div>
                 </div>
 
-                <div className="cards min-w-[300px] min-h-[80px] bg-white rounded-xl flex flex-col p-4 snap-start">
+                <div className="cards min-w-[300px]  bg-white rounded-xl flex flex-col p-4 snap-start">
                   <div className="flex space-x-1 mb-2">
                     <Star
                       className="p-1 w-6 h-6 rounded-full bg-primary"
@@ -300,7 +299,7 @@ export default function Reviews() {
                   </div>
                 </div>
 
-                <div className="cards min-w-[300px] min-h-[80px] bg-white rounded-xl flex flex-col p-4 snap-start">
+                <div className="cards min-w-[300px]  bg-white rounded-xl flex flex-col p-4 snap-start">
                   <div className="flex space-x-1 mb-2">
                     <Star
                       className="p-1 w-6 h-6 rounded-full bg-primary"
@@ -342,7 +341,7 @@ export default function Reviews() {
                   </div>
                 </div>
 
-                <div className="cards min-w-[300px] min-h-[80px] bg-white rounded-xl flex flex-col p-4 snap-start">
+                <div className="cards min-w-[300px]  bg-white rounded-xl flex flex-col p-4 snap-start">
                   <div className="flex space-x-1 mb-2">
                     <Star
                       className="p-1 w-6 h-6 rounded-full bg-primary"
@@ -383,7 +382,7 @@ export default function Reviews() {
                   </div>
                 </div>
 
-                <div className="cards min-w-[300px] min-h-[80px] bg-white rounded-xl flex flex-col p-4 snap-start">
+                <div className="cards min-w-[300px]  bg-white rounded-xl flex flex-col p-4 snap-start">
                   <div className="flex space-x-1 mb-2">
                     <Star
                       className="p-1 w-6 h-6 rounded-full bg-primary"
@@ -424,7 +423,7 @@ export default function Reviews() {
                   </div>
                 </div>
 
-                <div className="cards min-w-[300px] min-h-[80px] bg-white rounded-xl flex flex-col p-4 snap-start">
+                <div className="cards min-w-[300px]  bg-white rounded-xl flex flex-col p-4 snap-start">
                   <div className="flex space-x-1 mb-2">
                     <Star
                       className="p-1 w-6 h-6 rounded-full bg-primary"
@@ -465,7 +464,7 @@ export default function Reviews() {
                   </div>
                 </div>
 
-                <div className="cards min-w-[300px] min-h-[80px] bg-white rounded-xl flex flex-col p-4 snap-start">
+                <div className="cards min-w-[300px]  bg-white rounded-xl flex flex-col p-4 snap-start">
                   <div className="flex space-x-1 mb-2">
                     <Star
                       className="p-1 w-6 h-6 rounded-full bg-primary"
@@ -506,7 +505,7 @@ export default function Reviews() {
                   </div>
                 </div>
 
-                <div className="cards min-w-[300px] min-h-[80px] bg-white rounded-xl flex flex-col p-4 snap-start">
+                <div className="cards min-w-[300px]  bg-white rounded-xl flex flex-col p-4 snap-start">
                   <div className="flex space-x-1 mb-2">
                     <Star
                       className="p-1 w-6 h-6 rounded-full bg-primary"
@@ -547,7 +546,7 @@ export default function Reviews() {
                   </div>
                 </div>
 
-                <div className="cards min-w-[300px] min-h-[80px] bg-white rounded-xl flex flex-col p-4 snap-start">
+                <div className="cards min-w-[300px]  bg-white rounded-xl flex flex-col p-4 snap-start">
                   <div className="flex space-x-1 mb-2">
                     <Star
                       className="p-1 w-6 h-6 rounded-full bg-primary"
@@ -595,7 +594,7 @@ export default function Reviews() {
               <div id="track-2" ref={trackRef2} className="flex gap-5">
                 <div
                   ref={cardRef2}
-                  className="cards-2 min-w-[300px] min-h-[80px] bg-white rounded-xl flex flex-col p-4 snap-start"
+                  className="cards-2 min-w-[300px]  bg-white rounded-xl flex flex-col p-4 snap-start"
                 >
                   <div className="flex space-x-1 mb-3">
                     <Star

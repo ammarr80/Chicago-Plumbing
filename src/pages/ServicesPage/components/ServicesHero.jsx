@@ -1,5 +1,5 @@
 import { Mail, Menu } from "lucide-react";
-import servicesHeroImage from "../pics/services-hero.png";
+import servicesHeroImage from "../pics/services-hero.jpg";
 import PrimaryButton from "../../../reusbaleUi/PrimaryButton";
 import { Link } from "react-router-dom";
 
