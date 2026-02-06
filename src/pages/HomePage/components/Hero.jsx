@@ -108,18 +108,16 @@ export default function Hero() {
       <nav
         id="navbar"
         ref={navRef}
-        class="bg-primary w-full hidden max-lg:hidden fixed px-16 py-3 top-0 left-0 z-50 flex items-center justify-between"
+        class="bg-primary w-full hidden max-lg:hidden fixed px-8 py-3 top-0 left-0 z-50 flex items-center justify-between"
       >
-        <h2 class="font-bold text-2xl text-white">
-          Chicago Plumbing
-        </h2>
+        <h2 class="font-bold text-2xl text-white">Chicago Plumbing</h2>
         <div class="flex items-center gap-6 relative">
           <div>
             <a
               onMouseEnter={() => setMenuOpen("services")}
               onMouseLeave={() => setMenuOpen(null)}
               href="/services.html"
-              class="flex items-center text-sm gap-1 transition-all duration-300 font-semibold text-white navbar-links"
+              class="flex items-center gap-1 transition-all duration-300 font-semibold text-white navbar-links"
               id="services-dropdown"
             >
               View All Services{" "}
@@ -200,7 +198,7 @@ export default function Hero() {
               onMouseEnter={() => setMenuOpen("locations")}
               onMouseLeave={() => setMenuOpen(null)}
               href=""
-              class="flex items-center gap-1 text-sm font-semibold text-white navbar-links"
+              class="flex items-center gap-1 font-semibold text-white navbar-links"
               id="areas-dropdown"
             >
               Areas We Serve{" "}
@@ -280,14 +278,14 @@ export default function Hero() {
 
           <a
             href="#footer"
-            class="bg-primary border-1 text-white px-9 py-3 rounded-md font-semibold"
+            class="bg-primary border text-white px-9 py-3 rounded-md font-semibold"
           >
             Contact
           </a>
           <div class="flex items-center gap-5">
             <a
               href="tel:(312) 555-0147"
-              class="flex items-center gap-4 bg-white border shadow-2xl  text-black font-semibold px-4 py-3 rounded-lg"
+              class="flex items-center gap-4 bg-white shadow-2xl  text-black font-semibold px-4 py-3 rounded-lg"
             >
               <Phone className="w-5 h-5" /> (312) 555-0147
             </a>
