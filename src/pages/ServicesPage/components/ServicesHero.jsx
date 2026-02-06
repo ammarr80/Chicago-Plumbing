@@ -44,9 +44,9 @@ export default function ServicesHero() {
               </Link>
             </li>
             <li>
-              <a href="" className="font-semibold ">
+              <Link to="/locations" className="font-semibold ">
                 Service Areas
-              </a>
+              </Link>
             </li>
 
             <li>
