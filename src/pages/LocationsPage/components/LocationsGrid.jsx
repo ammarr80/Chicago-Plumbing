@@ -100,7 +100,7 @@ export default function ServicesGrid() {
               </div>
               <div className="flex items-center gap-4 ">
                 <Link
-                  to={`/services/${item.slug}`}
+                  to={`/locations/${item.slug}`}
                   className="bg-[#f4f4f4] rounded-lg px-5 py-3 text-sm xs:text-base text-black font-semibold"
                 >
                   Learn More
