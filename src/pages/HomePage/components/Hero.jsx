@@ -131,65 +131,66 @@ export default function Hero() {
                 id="services-popup"
               >
                 <nav class="grid grid-cols-2 gap-6 mb-8">
-                  <div class="flex flex-col gap-3">
-                    <a
-                      href="/services/emergency-plumbing"
-                      class="text-black text-sm font-semibold hover:underline"
-                    >
-                      Emergency Plumbing
-                    </a>
-                    <a
-                      href="/services/drain-cleaning"
-                      class="text-black text-sm font-semibold hover:underline"
-                    >
-                      Drain Cleaning & Unclogging
-                    </a>
-                    <a
-                      href="/services/sewer-repair"
-                      class="text-black text-sm font-semibold hover:underline"
-                    >
-                      Sewer Line Repair & Replacement
-                    </a>
-                    <a
-                      href="/services/water-heater"
-                      class="text-black text-sm font-semibold hover:underline"
-                    >
-                      Water Heater Services
-                    </a>
-                  </div>
-                  <div class="flex flex-col gap-3">
-                    <a
-                      href="/services/leak-detection"
-                      class="text-black text-sm font-semibold hover:underline"
-                    >
-                      Leak Detection & Repair
-                    </a>
-                    <a
-                      href="/services/toilet-repair"
-                      class="text-black text-sm font-semibold hover:underline"
-                    >
-                      Toilet & Fixture Repair
-                    </a>
-                    <a
-                      href="/services/sump-pump"
-                      class="text-black text-sm font-semibold hover:underline"
-                    >
-                      Sump Pump Installation & Repair
-                    </a>
-                    <a
-                      href="/services/frozen-pipes"
-                      class="text-black text-sm font-semibold hover:underline"
-                    >
-                      Frozen / Burst Pipe Repair
-                    </a>
-                  </div>
-                </nav>
-                <a
-                  href=""
+  <div class="flex flex-col gap-3">
+    <Link
+      to="/services/emergency-plumbing"
+      class="text-black text-sm font-semibold hover:underline"
+    >
+      Emergency Plumbing
+    </Link>
+    <Link
+      to="/services/shower-head-repair"
+      class="text-black text-sm font-semibold hover:underline"
+    >
+      Shower Head Repair
+    </Link>
+    <Link
+      to="/services/sewer-line-repair"
+      class="text-black text-sm font-semibold hover:underline"
+    >
+      Sewer Line Repair & Replacement
+    </Link>
+    <Link
+      to="/services/water-heater-services"
+      class="text-black text-sm font-semibold hover:underline"
+    >
+      Water Heater Services
+    </Link>
+  </div>
+  <div class="flex flex-col gap-3">
+    <Link
+      to="/services/leak-detection-repair"
+      class="text-black text-sm font-semibold hover:underline"
+    >
+      Leak Detection & Repair
+    </Link>
+    <Link
+      to="/services/toilet-fixture-repair"
+      class="text-black text-sm font-semibold hover:underline"
+    >
+      Toilet & Fixture Repair
+    </Link>
+    <Link
+      to="/services/sump-pump-installation"
+      class="text-black text-sm font-semibold hover:underline"
+    >
+      Sump Pump Installation & Repair
+    </Link>
+    <Link
+      to="/services/frozen-burst-pipe-repair"
+      class="text-black text-sm font-semibold hover:underline"
+    >
+      Frozen / Burst Pipe Repair
+    </Link>
+  </div>
+</nav>
+
+                <Link
+                  to="/services"
                   className="bg-primary font-semibold text-white rounded-md px-3 py-2"
                 >
                   More Details About Services
-                </a>
+                </Link>
               </div>
             )}
           </div>
@@ -211,67 +212,67 @@ export default function Hero() {
                 class="bg-white absolute max-w-lg -bottom-52 px-4 py-6 rounded-sm shadow-md navbar-popups"
                 id="areas-popup"
               >
-                <nav class="grid grid-cols-2 gap-6 mb-8">
+                 <nav class="grid grid-cols-2 gap-6 mb-8">
                   <div class="flex flex-col gap-3">
-                    <a
-                      href="/areas/lincoln-park"
+                    <Link
+                      to="/locations/lincoln-park"
                       class="text-black text-sm font-semibold hover:underline"
                     >
                       Lincoln Park
-                    </a>
-                    <a
-                      href="/areas/wicker-park"
+                    </Link>
+                    <Link
+                      to="/locations/wicker-park"
                       class="text-black text-sm font-semibold hover:underline"
                     >
                       Wicker Park
-                    </a>
-                    <a
-                      href="/areas/lakeview"
+                    </Link>
+                    <Link
+                      to="/locations/lakeview"
                       class="text-black text-sm font-semibold hover:underline"
                     >
                       Lakeview
-                    </a>
-                    <a
-                      href="/areas/hyde-park"
+                    </Link>
+                    <Link
+                      to="/locations/hyde-park"
                       class="text-black text-sm font-semibold hover:underline"
                     >
                       Hyde Park
-                    </a>
+                    </Link>
                   </div>
 
                   <div class="flex flex-col gap-3">
-                    <a
-                      href="/areas/logan-square"
+                    <Link
+                      to="/locations/logan-square"
                       class="text-black text-sm font-semibold hover:underline"
                     >
                       Logan Square
-                    </a>
-                    <a
-                      href="/areas/river-north"
+                    </Link>
+                    <Link
+                      to="/locations/river-north"
                       class="text-black text-sm font-semibold hover:underline"
                     >
                       River North
-                    </a>
-                    <a
-                      href="/areas/south-loop"
+                    </Link>
+                    <Link
+                      to="/locations/south-loop"
                       class="text-black text-sm font-semibold hover:underline"
                     >
                       South Loop
-                    </a>
-                    <a
-                      href="/areas/old-town"
+                    </Link>
+                    <Link
+                      to="/locations/old-town"
                       class="text-black text-sm font-semibold hover:underline"
                     >
                       Old Town
-                    </a>
+                    </Link>
                   </div>
                 </nav>
-                <a
-                  href=""
+                <Link
+                  to={"/locations"}
                   className="bg-primary font-semibold text-white rounded-md px-3 py-2"
                 >
                   More Details About Locations
-                </a>
+                </Link>
               </div>
             )}
           </div>
