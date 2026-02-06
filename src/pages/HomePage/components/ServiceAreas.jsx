@@ -1,4 +1,5 @@
 import { MapPin } from "lucide-react";
+import { Link } from "react-router";
 
 export default function ServiceAreas() {
   return (
@@ -55,13 +56,19 @@ export default function ServiceAreas() {
                 <p>Gold Coast</p>
               </li>
             </ul>
-            <div className="mb-12">
+            <div className="space-x-3 grid justify-items-start gap-3 md:flex mb-12">
               <a
                 href="tel:(312) 555-0147"
                 className="bg-primary text-white font-semibold px-6 py-4 rounded-lg"
               >
                 Call In Your Area
               </a>
+              <Link
+              to="/locations"
+              className="bg-white border text-black inline-block border-black/30 font-semibold px-6 py-4 rounded-lg"
+            >
+              View All Locations
+            </Link>
             </div>
           </div>
         </div>
