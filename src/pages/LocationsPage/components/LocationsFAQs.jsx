@@ -4,50 +4,51 @@ import { useState } from "react";
 export default function FAQs() {
   const [currentIndex, setCurrentIndex] = useState(null);
 
-  const faqs = [
-    {
-      question: "What types of services do you offer?",
-      answer:
-        "We provide a wide range of services to meet your needs, including installation, maintenance, and repair solutions. Each service is delivered by skilled professionals using the latest techniques.",
-      open: "plus",
-      close: "minus",
-    },
-    {
-      question: "Do you offer emergency services?",
-      answer:
-        "Yes, our team is available for urgent service needs. We respond quickly and efficiently to minimize downtime and address issues safely and effectively.",
-      open: "plus",
-      close: "minus",
-    },
-    {
-      question: "How do you ensure high-quality results?",
-      answer:
-        "Every project is handled with precision and care. Our team follows strict quality protocols, uses professional-grade tools, and focuses on delivering lasting and reliable results.",
-      open: "plus",
-      close: "minus",
-    },
-    {
-      question: "Are your services customizable?",
-      answer:
-        "Absolutely. We tailor our solutions to your specific requirements. From scheduling to service scope, we work closely with you to ensure the outcome meets your expectations.",
-      open: "plus",
-      close: "minus",
-    },
-    {
-      question: "Do you provide transparent pricing?",
-      answer:
-        "Yes. We offer clear, upfront estimates and detailed explanations of our services. You will always know what to expect without hidden fees or surprises.",
-      open: "plus",
-      close: "minus",
-    },
-    {
-      question: "How do you prioritize customer satisfaction?",
-      answer:
-        "Customer satisfaction is at the heart of our services. We focus on communication, professionalism, and quality to ensure each client has a smooth and positive experience.",
-      open: "plus",
-      close: "minus",
-    },
-  ];
+ const faqs = [
+  {
+    question: "Which areas do you serve?",
+    answer:
+      "We provide plumbing services across multiple neighborhoods in Chicago. Each location receives fast, professional, and reliable service from our local team.",
+    open: "plus",
+    close: "minus",
+  },
+  {
+    question: "Do you offer emergency services in all locations?",
+    answer:
+      "Yes. Our emergency plumbing team responds quickly to urgent issues in every service area, minimizing damage and restoring plumbing safely and efficiently.",
+    open: "plus",
+    close: "minus",
+  },
+  {
+    question: "Are your plumbers familiar with local buildings?",
+    answer:
+      "Absolutely. Our team has extensive experience working in apartments, condos, and older homes in each neighborhood, ensuring safe and effective repairs.",
+    open: "plus",
+    close: "minus",
+  },
+  {
+    question: "Can I schedule service in my specific neighborhood?",
+    answer:
+      "Yes. You can book services for your area directly, and our local team will arrive on time with the right tools to handle the job efficiently.",
+    open: "plus",
+    close: "minus",
+  },
+  {
+    question: "Do you offer transparent pricing for each location?",
+    answer:
+      "Yes. We provide clear upfront pricing for every service in every neighborhood, so you know exactly what to expect without surprises.",
+    open: "plus",
+    close: "minus",
+  },
+  {
+    question: "How do you ensure high-quality service locally?",
+    answer:
+      "Each location is supported by experienced plumbers who follow strict quality protocols. Our focus is on reliable, long-lasting solutions for every client.",
+    open: "plus",
+    close: "minus",
+  },
+];
+
 
   return (
     <>
