@@ -1,9 +1,18 @@
 import image from "../pics/services-hero.jpg";
-import { Menu, Mail,Plus, Minus, Check, CheckCircle, Star, Trash } from "lucide-react";
+import {
+  Menu,
+  Mail,
+  Plus,
+  Minus,
+  Check,
+  CheckCircle,
+  Star,
+  Trash,
+} from "lucide-react";
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import PrimaryButton from "../../../reusbaleUi/PrimaryButton";
-import {useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import Footer from "../../../reusbaleUi/Footer";
 
 const data = [
@@ -20,10 +29,30 @@ const data = [
       "Guaranteed work",
     ],
     reviews: [
-      { text: "They fixed my burst pipe fast and professionally.", name: "Alex, Chicago", job: "Homeowner", rating: 5 },
-      { text: "Quick response and great service.", name: "Sarah, Chicago", job: "Tenant", rating: 4 },
-      { text: "Solved the issue right away.", name: "John, Chicago", job: "Landlord", rating: 5 },
-      { text: "Arrived late at night and handled it perfectly.", name: "Michael, Chicago", job: "Homeowner", rating: 5 },
+      {
+        text: "They fixed my burst pipe fast and professionally.",
+        name: "Alex, Chicago",
+        job: "Homeowner",
+        rating: 5,
+      },
+      {
+        text: "Quick response and great service.",
+        name: "Sarah, Chicago",
+        job: "Tenant",
+        rating: 4,
+      },
+      {
+        text: "Solved the issue right away.",
+        name: "John, Chicago",
+        job: "Landlord",
+        rating: 5,
+      },
+      {
+        text: "Arrived late at night and handled it perfectly.",
+        name: "Michael, Chicago",
+        job: "Homeowner",
+        rating: 5,
+      },
     ],
     faqs: [
       {
@@ -56,10 +85,30 @@ const data = [
       "Professional tools",
     ],
     reviews: [
-      { text: "Shower works like new now.", name: "Maya, Chicago", job: "Tenant", rating: 4 },
-      { text: "Fixed the clog in minutes.", name: "Omar, Chicago", job: "Homeowner", rating: 5 },
-      { text: "Very clean and professional.", name: "Leah, Chicago", job: "Manager", rating: 5 },
-      { text: "Pressure improved instantly.", name: "Daniel, Chicago", job: "Homeowner", rating: 4 },
+      {
+        text: "Shower works like new now.",
+        name: "Maya, Chicago",
+        job: "Tenant",
+        rating: 4,
+      },
+      {
+        text: "Fixed the clog in minutes.",
+        name: "Omar, Chicago",
+        job: "Homeowner",
+        rating: 5,
+      },
+      {
+        text: "Very clean and professional.",
+        name: "Leah, Chicago",
+        job: "Manager",
+        rating: 5,
+      },
+      {
+        text: "Pressure improved instantly.",
+        name: "Daniel, Chicago",
+        job: "Homeowner",
+        rating: 4,
+      },
     ],
     faqs: [
       {
@@ -92,10 +141,30 @@ const data = [
       "Minimal disruption",
     ],
     reviews: [
-      { text: "Fixed our sewer problem fast.", name: "Hassan, Chicago", job: "Landlord", rating: 5 },
-      { text: "Very professional service.", name: "Nina, Chicago", job: "Manager", rating: 4 },
-      { text: "Saved us from major damage.", name: "Eli, Chicago", job: "Homeowner", rating: 5 },
-      { text: "Clear and honest work.", name: "Robert, Chicago", job: "Homeowner", rating: 5 },
+      {
+        text: "Fixed our sewer problem fast.",
+        name: "Hassan, Chicago",
+        job: "Landlord",
+        rating: 5,
+      },
+      {
+        text: "Very professional service.",
+        name: "Nina, Chicago",
+        job: "Manager",
+        rating: 4,
+      },
+      {
+        text: "Saved us from major damage.",
+        name: "Eli, Chicago",
+        job: "Homeowner",
+        rating: 5,
+      },
+      {
+        text: "Clear and honest work.",
+        name: "Robert, Chicago",
+        job: "Homeowner",
+        rating: 5,
+      },
     ],
     faqs: [
       {
@@ -128,10 +197,30 @@ const data = [
       "Same-day service",
     ],
     reviews: [
-      { text: "Installed fast and works great.", name: "Liam, Chicago", job: "Homeowner", rating: 5 },
-      { text: "Very friendly technicians.", name: "Sophia, Chicago", job: "Tenant", rating: 5 },
-      { text: "Repaired my old heater easily.", name: "Zara, Chicago", job: "Landlord", rating: 4 },
-      { text: "Hot water same day.", name: "Andrew, Chicago", job: "Homeowner", rating: 5 },
+      {
+        text: "Installed fast and works great.",
+        name: "Liam, Chicago",
+        job: "Homeowner",
+        rating: 5,
+      },
+      {
+        text: "Very friendly technicians.",
+        name: "Sophia, Chicago",
+        job: "Tenant",
+        rating: 5,
+      },
+      {
+        text: "Repaired my old heater easily.",
+        name: "Zara, Chicago",
+        job: "Landlord",
+        rating: 4,
+      },
+      {
+        text: "Hot water same day.",
+        name: "Andrew, Chicago",
+        job: "Homeowner",
+        rating: 5,
+      },
     ],
     faqs: [
       {
@@ -164,10 +253,30 @@ const data = [
       "Fast repairs",
     ],
     reviews: [
-      { text: "Found a hidden leak quickly.", name: "Aisha, Chicago", job: "Homeowner", rating: 5 },
-      { text: "Very precise service.", name: "Daniel, Chicago", job: "Supervisor", rating: 4 },
-      { text: "Quick and clean fix.", name: "Fatima, Chicago", job: "Tenant", rating: 5 },
-      { text: "Solved what others couldn’t.", name: "Thomas, Chicago", job: "Homeowner", rating: 5 },
+      {
+        text: "Found a hidden leak quickly.",
+        name: "Aisha, Chicago",
+        job: "Homeowner",
+        rating: 5,
+      },
+      {
+        text: "Very precise service.",
+        name: "Daniel, Chicago",
+        job: "Supervisor",
+        rating: 4,
+      },
+      {
+        text: "Quick and clean fix.",
+        name: "Fatima, Chicago",
+        job: "Tenant",
+        rating: 5,
+      },
+      {
+        text: "Solved what others couldn’t.",
+        name: "Thomas, Chicago",
+        job: "Homeowner",
+        rating: 5,
+      },
     ],
     faqs: [
       {
@@ -200,10 +309,30 @@ const data = [
       "One-visit solutions",
     ],
     reviews: [
-      { text: "Toilet fixed perfectly.", name: "Ravi, Chicago", job: "Tenant", rating: 5 },
-      { text: "Quick and friendly team.", name: "Emily, Chicago", job: "Homeowner", rating: 4 },
-      { text: "Multiple fixtures repaired.", name: "Jamal, Chicago", job: "Manager", rating: 5 },
-      { text: "Everything works now.", name: "Kevin, Chicago", job: "Homeowner", rating: 5 },
+      {
+        text: "Toilet fixed perfectly.",
+        name: "Ravi, Chicago",
+        job: "Tenant",
+        rating: 5,
+      },
+      {
+        text: "Quick and friendly team.",
+        name: "Emily, Chicago",
+        job: "Homeowner",
+        rating: 4,
+      },
+      {
+        text: "Multiple fixtures repaired.",
+        name: "Jamal, Chicago",
+        job: "Manager",
+        rating: 5,
+      },
+      {
+        text: "Everything works now.",
+        name: "Kevin, Chicago",
+        job: "Homeowner",
+        rating: 5,
+      },
     ],
     faqs: [
       {
@@ -236,10 +365,30 @@ const data = [
       "Long-term protection",
     ],
     reviews: [
-      { text: "Installed perfectly.", name: "Grace, Chicago", job: "Homeowner", rating: 5 },
-      { text: "Fast and reliable.", name: "Omar, Chicago", job: "Landlord", rating: 5 },
-      { text: "Basement stays dry now.", name: "Leila, Chicago", job: "Tenant", rating: 4 },
-      { text: "Great workmanship.", name: "Brian, Chicago", job: "Homeowner", rating: 5 },
+      {
+        text: "Installed perfectly.",
+        name: "Grace, Chicago",
+        job: "Homeowner",
+        rating: 5,
+      },
+      {
+        text: "Fast and reliable.",
+        name: "Omar, Chicago",
+        job: "Landlord",
+        rating: 5,
+      },
+      {
+        text: "Basement stays dry now.",
+        name: "Leila, Chicago",
+        job: "Tenant",
+        rating: 4,
+      },
+      {
+        text: "Great workmanship.",
+        name: "Brian, Chicago",
+        job: "Homeowner",
+        rating: 5,
+      },
     ],
     faqs: [
       {
@@ -249,8 +398,7 @@ const data = [
       },
       {
         question: "How long does installation take?",
-        answer:
-          "Most installations are completed within a single day.",
+        answer: "Most installations are completed within a single day.",
       },
       {
         question: "Do you service existing sump pumps?",
@@ -272,10 +420,30 @@ const data = [
       "Long-term fixes",
     ],
     reviews: [
-      { text: "Saved my house from flooding.", name: "Nora, Chicago", job: "Tenant", rating: 5 },
-      { text: "Very fast service.", name: "Imran, Chicago", job: "Homeowner", rating: 5 },
-      { text: "Professional repair.", name: "Samantha, Chicago", job: "Landlord", rating: 4 },
-      { text: "Handled frozen pipes safely.", name: "David, Chicago", job: "Homeowner", rating: 5 },
+      {
+        text: "Saved my house from flooding.",
+        name: "Nora, Chicago",
+        job: "Tenant",
+        rating: 5,
+      },
+      {
+        text: "Very fast service.",
+        name: "Imran, Chicago",
+        job: "Homeowner",
+        rating: 5,
+      },
+      {
+        text: "Professional repair.",
+        name: "Samantha, Chicago",
+        job: "Landlord",
+        rating: 4,
+      },
+      {
+        text: "Handled frozen pipes safely.",
+        name: "David, Chicago",
+        job: "Homeowner",
+        rating: 5,
+      },
     ],
     faqs: [
       {
@@ -297,9 +465,6 @@ const data = [
   },
 ];
 
-
-
-
 export default function ServicesInfo() {
   const { slug } = useParams();
   const service = data.find((item) => item.slug === slug);
@@ -310,11 +475,11 @@ export default function ServicesInfo() {
   const cardAmount = 4;
   let cardWidth = useRef(0);
   const GAP = 40;
-  let trackWidth = useRef(0)
+  let trackWidth = useRef(0);
   let animationId;
   useEffect(() => {
-     cardWidth = cardRef.current.offsetWidth + GAP;
-     trackWidth = cardWidth * cardAmount;
+    cardWidth = cardRef.current.offsetWidth + GAP;
+    trackWidth = cardWidth * cardAmount;
 
     x.current = -trackWidth;
 
@@ -324,15 +489,15 @@ export default function ServicesInfo() {
       if (x.current >= 0) {
         x.current = -trackWidth;
       }
-      containerRef.current.style.transform = `translateX(${x.current}px)`
+      containerRef.current.style.transform = `translateX(${x.current}px)`;
 
-      animationId = requestAnimationFrame(animate)
+      animationId = requestAnimationFrame(animate);
     }
-    animate()
-    return () => cancelAnimationFrame(animationId)
+    animate();
+    return () => cancelAnimationFrame(animationId);
   }, []);
 
-    const [currentIndex, setCurrentIndex] = useState(null);
+  const [currentIndex, setCurrentIndex] = useState(null);
   return (
     <div className="space-y-26">
       <header className="max-w-[90%] mx-auto">
@@ -402,10 +567,12 @@ export default function ServicesInfo() {
             <h1 className="text-4xl lg:text-5xl font-bold mb-8">
               {service.title}
             </h1>
-            <p className="text-gray-600 mb-13 max-w-[45ch]">{service.description}</p>
+            <p className="text-gray-600 mb-13 max-w-[45ch]">
+              {service.description}
+            </p>
             <PrimaryButton />
           </div>
-          <div className="py-2 px-4"> 
+          <div className="py-2 px-4">
             <img src={image} alt="" className="rounded-lg mx-auto shadow-md" />
           </div>
         </div>
@@ -433,31 +600,39 @@ export default function ServicesInfo() {
         <section className="">
           <h2 className="font-bold text-4xl mb-5">What People Say</h2>
           <p className="text-gray-600 mb-12">
-            Our customers trust us for fast response times, honest pricing, and quality workmanship. From emergency repairs to routine maintenance, we focus on delivering reliable plumbing solutions that keep homes and businesses running smoothly.
+            Our customers trust us for fast response times, honest pricing, and
+            quality workmanship. From emergency repairs to routine maintenance,
+            we focus on delivering reliable plumbing solutions that keep homes
+            and businesses running smoothly.
           </p>
           <div className="w-full overflow-hidden">
             <div className="flex gap-10" ref={containerRef}>
               {[...service.reviews, ...service.reviews].map((review, index) => (
-                <div key={index} ref={cardRef} className="cards bg-white rounded-lg py-6 px-5 grid justify-items-between space-y-6 shrink-0 max-w-[400px] min-w-[300px]">
+                <div
+                  key={index}
+                  ref={cardRef}
+                  className="cards bg-white rounded-lg py-6 px-5 grid justify-items-between space-y-6 shrink-0 max-w-[400px] min-w-[300px]"
+                >
                   <div className="space-y-2">
-                      <div className="flex gap-2">
-                            {Array(review.rating)
-                              .fill(0)
-                              .map((_, i) => (
-                                <Star key={i} className="bg-primary rounded-full w-6 h-6 p-1" fill="#fff" stroke="0" />
-                              ))}
-                      </div>
-                      <p>
-                          <p>{review.text}</p>
-                      </p>
+                    <div className="flex gap-2">
+                      {Array(review.rating)
+                        .fill(0)
+                        .map((_, i) => (
+                          <Star
+                            key={i}
+                            className="bg-primary rounded-full w-6 h-6 p-1"
+                            fill="#fff"
+                            stroke="0"
+                          />
+                        ))}
+                    </div>
+                    <p>
+                      <p>{review.text}</p>
+                    </p>
                   </div>
                   <div>
-                      <p className="font-bold">
-                          {review.name}
-                      </p>
-                      <p className="text-sm text-gray-600">
-                          {review.job}
-                      </p>
+                    <p className="font-bold">{review.name}</p>
+                    <p className="text-sm text-gray-600">{review.job}</p>
                   </div>
                 </div>
               ))}
@@ -465,45 +640,48 @@ export default function ServicesInfo() {
           </div>
         </section>
         <section>
-           <h2 className="font-bold text-4xl mb-5">What People Ask</h2>
+          <h2 className="font-bold text-4xl mb-5">What People Ask</h2>
           <p className="text-gray-600 mb-12">
-            Our customers trust us for fast response times, honest pricing, and quality workmanship. From emergency repairs to routine maintenance, we focus on delivering reliable plumbing solutions that keep homes and businesses running smoothly.
+            Our customers trust us for fast response times, honest pricing, and
+            quality workmanship. From emergency repairs to routine maintenance,
+            we focus on delivering reliable plumbing solutions that keep homes
+            and businesses running smoothly.
           </p>
-            <div className="faqs-container max-w-[80%] mx-auto space-y-4 max-md:max-w-[100%]">
-          {service.faqs.map((faq, index) => (
-            <div
-              key={index}
-              className="bg-white px-6 py-4 rounded-lg shadow-sm max-md:px-4 max-md:py-3"
-            >
-              <div className="flex items-center justify-between">
-                <h3 className="font-bold text-lg max-md:text-base">
-                  {faq.question}
-                </h3>
+          <div className="faqs-container max-w-[80%] mx-auto space-y-4 max-md:max-w-[100%]">
+            {service.faqs.map((faq, index) => (
+              <div
+                key={index}
+                className="bg-white px-6 py-4 rounded-lg shadow-sm max-md:px-4 max-md:py-3"
+              >
+                <div className="flex items-center justify-between">
+                  <h3 className="font-bold text-lg max-md:text-base">
+                    {faq.question}
+                  </h3>
 
-                <button
-                  className="plus cursor-pointer"
-                  onClick={() =>
-                    setCurrentIndex(currentIndex != index ? index : null)
-                  }
-                >
-                  {currentIndex == index ? (
-                    <Minus />
-                  ) : (
-                    <Plus className="w-7 h-7" />
+                  <button
+                    className="plus cursor-pointer"
+                    onClick={() =>
+                      setCurrentIndex(currentIndex != index ? index : null)
+                    }
+                  >
+                    {currentIndex == index ? (
+                      <Minus />
+                    ) : (
+                      <Plus className="w-7 h-7" />
+                    )}
+                  </button>
+                </div>
+
+                <div>
+                  {currentIndex == index && (
+                    <p className="text-base tracking-wide leading-normal mt-5 max-md:text-sm text-gray-600 faqs-p">
+                      {faq.answer}
+                    </p>
                   )}
-                </button>
+                </div>
               </div>
-
-              <div>
-                {currentIndex == index && (
-                  <p className="text-base tracking-wide leading-normal mt-5 max-md:text-sm text-gray-600 faqs-p">
-                    {faq.answer}
-                  </p>
-                )}
-              </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
         </section>
       </main>
       <footer>
