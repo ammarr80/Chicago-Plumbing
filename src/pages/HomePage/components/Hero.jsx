@@ -40,7 +40,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <header className="max-w-[90%] mx-auto">
+    <header className="max-w-[90%] mx-auto" id="header">
       <nav className="md:hidden flex items-center justify-between py-6 mb-3">
         <h2 className="text-2xl text-primary font-bold">Chicago Plumbing</h2>
         <Menu id="menu" />
@@ -50,18 +50,18 @@ export default function Hero() {
         <h2 className="text-2xl text-primary font-bold">Chicago Plumbing</h2>
         <ul className="flex items-center space-x-12">
           <li>
-            <a href="" className="font-semibold">
+            <a href="#services" className="font-semibold">
               Services
             </a>
           </li>
           <li>
-            <a href="" className="font-semibold">
+            <a href="#service-areas" className="font-semibold">
               Service Areas
             </a>
           </li>
           <li>
             <a
-              href=""
+              href="#footer"
               className="font-semibold bg-white px-4 py-3 text-black rounded-lg flex gap-3 items-center"
             >
               <Mail />
@@ -75,28 +75,28 @@ export default function Hero() {
         <h2 className="font-bold text-primary text-3xl">Chicago Plumbing</h2>
         <ul className="flex items-center space-x-12">
           <li>
-            <a href="" className="font-semibold">
+            <a href="#services" className="font-semibold">
               Services
             </a>
           </li>
           <li>
-            <a href="" className="font-semibold">
+            <a href="#service-areas" className="font-semibold">
               Service Areas
             </a>
           </li>
           <li>
-            <a href="" className="font-semibold">
+            <a href="#reviews" className="font-semibold">
               Reviews
             </a>
           </li>
           <li>
-            <a href="" className="font-semibold">
+            <a href="#faqs" className="font-semibold">
               FAQs
             </a>
           </li>
           <li>
             <a
-              href=""
+              href="#footer"
               className="font-semibold bg-primary px-4 py-3 text-white rounded-lg flex gap-3 items-center"
             >
               Contact
