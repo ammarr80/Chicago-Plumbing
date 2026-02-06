@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 export default function Footer() {
   return (
     <>
@@ -120,22 +121,17 @@ export default function Footer() {
                       <h3 className="font-bold text-lg">Company</h3>
                       <ul className="font-semibold mt-2 space-y-1">
                         <li>
-                          <a href="#" className="no-underline hover:underline">
+                          <Link to={"/"} className="no-underline hover:underline">
                             Home
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a href="#" className="no-underline hover:underline">
-                            About Us
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#" className="no-underline hover:underline">
+                          <a href="#footer" className="no-underline hover:underline">
                             Contact
                           </a>
                         </li>
                         <li>
-                          <a href="#" className="no-underline hover:underline">
+                          <a href="#service-areas" className="no-underline hover:underline">
                             Service Areas
                           </a>
                         </li>
@@ -143,38 +139,39 @@ export default function Footer() {
                     </div>
 
                     <div>
-                      <h3 className="font-bold text-lg">Services</h3>
-                      <ul className="font-semibold mt-2 space-y-1">
-                        <li>
-                          <a href="#" className="no-underline hover:underline">
-                            Emergency Plumbing
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#" className="no-underline hover:underline">
-                            Drain Cleaning
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#" className="no-underline hover:underline">
-                            Water Heater Repair
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#" className="no-underline hover:underline">
-                            Pipe Replacement
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            href="/services.html"
-                            className="no-underline hover:underline"
-                          >
-                            View All Services
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
+  <h3 className="font-bold text-lg">Services</h3>
+  <ul className="font-semibold mt-2 space-y-1">
+    <li>
+      <Link to={"/services/emergency-plumbing"} className="no-underline hover:underline">
+        Emergency Plumbing
+      </Link>
+    </li>
+    <li>
+      <Link to={"/services/shower-head-repair"} className="no-underline hover:underline">
+        Shower Head Repair
+      </Link>
+    </li>
+    <li>
+      <Link to={"/services/water-heater-services"} className="no-underline hover:underline">
+        Water Heater Repair
+      </Link>
+    </li>
+    <li>
+      <Link to={"/services/sewer-line-repair"} className="no-underline hover:underline">
+        Sewer Line Repair
+      </Link>
+    </li>
+    <li>
+      <Link
+        to="/services"
+        className="no-underline hover:underline"
+      >
+        View All Services
+      </Link>
+    </li>
+  </ul>
+</div>
+
                   </div>
 
                   <div>
@@ -186,7 +183,7 @@ export default function Footer() {
                         </a>
                       </li>
                       <li>
-                        <a href="#" className="no-underline hover:underline">
+                        <a href="#reviews" className="no-underline hover:underline">
                           Reviews
                         </a>
                       </li>
