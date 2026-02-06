@@ -78,7 +78,7 @@ export default function ServicesGrid() {
                 <item.Icon className="w-13 h-13 text-primary" />
                 <div class="text-content  ">
                   <h4 class="font-bold text-lg mb-1">{item.title}</h4>
-                  <p class="text-center mb-8 text-gray-600 flex-grow">
+                  <p class="text-center max-w-[35ch] mb-8 text-gray-600 flex-grow">
                     {item.description}
                   </p>
                 </div>
