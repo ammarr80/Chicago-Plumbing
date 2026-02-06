@@ -40,6 +40,9 @@ textarea {
     transform: translateY(0px);
   }
 }
+html {
+  scroll-behavior: smooth;
+}
 
 .slide-in {
   animation: slideIn 0.5s ease-in-out;
